@@ -1,0 +1,482 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Жанна Носова · Бренд и упаковка</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Жанна Носова — бренд в e-commerce, упаковке и 3D: визуальные системы, бренд-буки, выпущенные продукты.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Nunito:wght@400;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: стиль TypeUI «basic» — печатная редакционная сетка: тёмно-синяя обложка, белые листы, сжатый гротеск Oswald в заголовках, толстые линейки-колонтитулы над разделами; текст ~64ch, визуал до 1120px */
+:root {
+  --ink: #0a1829;
+  --paper: #ffffff;
+  --sand: #f2f3f7;
+  --plate: #eceef3;
+  --text-2: #4a5568;
+  --line: rgba(10, 24, 41, .14);
+  --accent: #c8102e;
+  --accent-ink: #9e0c24;
+  --accent-soft: #e30613;
+  --hero-bg: #0a1829;
+  --hero-fg: #ffffff;
+  --hero-2: #b6c0cf;
+  --hero-accent: #ff5a4f;
+  --on-accent: #ffffff;
+  --display: "Oswald", "Arial Narrow", "Helvetica Neue", Arial, sans-serif;
+  --serif: var(--display);
+  --sans: "Nunito", "Helvetica Neue", Arial, sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
+  --r: 4px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --ink: #eef1f6; --paper: #0a1829; --sand: #12233a; --plate: #152a44; --text-2: #b6c0cf;
+    --line: rgba(238, 241, 246, .16); --accent: #ff6b61; --accent-ink: #ff9a92; --accent-soft: #e30613;
+    --hero-bg: #061120; --hero-fg: #ffffff; --hero-2: #b6c0cf; --hero-accent: #ff6b61; --on-accent: #0a1829;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --ink: #eef1f6; --paper: #0a1829; --sand: #12233a; --plate: #152a44; --text-2: #b6c0cf;
+  --line: rgba(238, 241, 246, .16); --accent: #ff6b61; --accent-ink: #ff9a92; --accent-soft: #e30613;
+  --hero-bg: #061120; --hero-fg: #ffffff; --hero-2: #b6c0cf; --hero-accent: #ff6b61; --on-accent: #0a1829;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; } }
+body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--sans); font-size: 17px; line-height: 1.6; }
+.wrap { max-width: 1120px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+.text { max-width: 64ch; }
+a { color: var(--accent); text-underline-offset: 3px; }
+a:focus-visible, button:focus-visible, input:focus-visible, summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+h1, h2, h3 { text-wrap: balance; margin: 0; }
+p { margin: 0; }
+img { display: block; max-width: 100%; height: auto; }
+.label { font-family: var(--mono); font-size: 11px; letter-spacing: .12em; text-transform: uppercase; color: var(--text-2); }
+
+/* Обложка */
+.hero { background: var(--hero-bg); color: var(--hero-fg); }
+.hero .wrap { padding-block: clamp(40px, 8vw, 80px); display: grid; gap: 28px; }
+.hero .label { color: var(--hero-2); }
+.hero h1 { font-family: var(--display); font-weight: 600; font-size: clamp(40px, 7.6vw, 84px); line-height: .98; letter-spacing: -.005em; text-transform: uppercase; max-width: 14ch; }
+.hero h1 em { font-style: normal; color: var(--hero-accent); }
+.hero .lead { color: var(--hero-2); max-width: 58ch; font-size: 18px; }
+.reqs { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1px; background: rgba(245,245,242,.14); border: 1px solid rgba(245,245,242,.14); }
+.reqs a { display: grid; gap: 6px; height: 100%; padding: 16px 18px; background: var(--hero-bg); color: var(--hero-fg); text-decoration: none; transition: background .2s; }
+.reqs a:hover { background: var(--sand); color: var(--ink); }
+.reqs a:hover .go { color: var(--accent); }
+.reqs .q { font-size: 15px; line-height: 1.35; }
+.reqs .go { font-family: var(--display); font-weight: 500; font-size: 13px; letter-spacing: .08em; text-transform: uppercase; color: var(--hero-accent); }
+.passport { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 16px 24px; margin: 0; }
+.passport dt { font-family: var(--mono); font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: var(--hero-2); margin-bottom: 4px; }
+.passport dd { margin: 0; font-size: 15px; }
+
+/* Секции */
+section { border-bottom: 1px solid var(--line); scroll-margin-top: 12px; }
+section > .wrap { padding-block: clamp(48px, 8vw, 88px); display: grid; gap: 32px; }
+.head { display: grid; gap: 14px; }
+.kicker { font-family: var(--display); font-size: 15px; font-weight: 500; letter-spacing: .08em; text-transform: uppercase; color: var(--accent); border-top: 3px solid var(--ink); padding-top: 12px; }
+h2 { font-family: var(--display); font-weight: 600; font-size: clamp(32px, 5vw, 56px); line-height: 1.02; text-transform: uppercase; max-width: 20ch; }
+.quote { border-left: 3px solid var(--accent-soft); padding-left: 16px; color: var(--text-2); font-size: 15px; max-width: 60ch; }
+.quote b { color: var(--ink); font-weight: 500; }
+h3 { font-family: var(--display); font-weight: 500; font-size: 24px; line-height: 1.2; text-transform: uppercase; letter-spacing: .01em; }
+.sub { display: grid; gap: 16px; }
+.sub > p { max-width: 64ch; }
+
+/* Визуал */
+figure { margin: 0; display: grid; gap: 10px; min-width: 0; }
+figcaption { font-size: 14px; color: var(--text-2); line-height: 1.45; }
+figcaption b { color: var(--ink); font-weight: 600; }
+.plate { background: var(--plate); display: grid; place-items: center; overflow: hidden; }
+.plate img { width: 100%; }
+.zoom { cursor: zoom-in; border: 0; padding: 0; background: none; display: block; width: 100%; }
+.g2 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.g3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+.g4 { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; }
+.g21 { display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 1fr); gap: 16px; align-items: start; }
+@media (max-width: 760px) { .g3, .g21 { grid-template-columns: 1fr; } .g4 { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 520px) { .g2 { grid-template-columns: 1fr; } }
+.ratio-43 img { aspect-ratio: 4 / 3; object-fit: cover; }
+.ratio-32 img { aspect-ratio: 3 / 2; object-fit: cover; }
+
+.points { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px 28px; }
+.points li { display: grid; gap: 4px; padding-top: 14px; border-top: 3px solid var(--ink); }
+.points b { font-family: var(--display); font-weight: 500; font-size: 18px; text-transform: uppercase; letter-spacing: .02em; }
+.points span { color: var(--text-2); font-size: 15px; }
+.swatch { display: inline-block; width: 10px; height: 10px; margin-right: 6px; vertical-align: 1px; }
+
+/* Сравнение рендер → фото */
+.compare { display: grid; gap: 16px; }
+.tabs { display: flex; flex-wrap: wrap; gap: 8px; }
+.tabs button { font: 500 14px/1 var(--display); text-transform: uppercase; letter-spacing: .06em; padding: 12px 16px; min-height: 44px; border-radius: var(--r); border: 1px solid var(--line); background: transparent; color: var(--ink); cursor: pointer; }
+.tabs button[aria-selected="true"] { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+.pair { display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); gap: 16px; align-items: center; }
+.pair .arrow { font: 600 32px var(--display); color: var(--accent); }
+@media (max-width: 620px) { .pair { grid-template-columns: 1fr; } .pair .arrow { transform: rotate(90deg); justify-self: center; } }
+.role { background: var(--sand); border-left: 6px solid var(--accent-soft); padding: 20px 22px; display: grid; gap: 6px; max-width: 64ch; }
+
+/* Адаптации */
+details { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+summary { cursor: pointer; padding: 16px 0; min-height: 44px; font-family: var(--display); font-weight: 500; font-size: 20px; text-transform: uppercase; letter-spacing: .02em; list-style: none; display: flex; justify-content: space-between; gap: 16px; }
+summary::-webkit-details-marker { display: none; }
+summary .label { align-self: center; }
+details[open] summary .more { display: none; }
+details:not([open]) summary .less { display: none; }
+.formats { overflow-x: auto; padding-bottom: 20px; }
+.formats-in { display: flex; flex-wrap: wrap; gap: 14px; align-items: flex-end; min-width: 0; }
+.formats figure { gap: 6px; }
+.formats img { width: calc(var(--w) * .5px); max-width: 100%; }
+.formats figcaption { font: 11px var(--mono); font-variant-numeric: tabular-nums; }
+
+/* AI */
+.ai { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 28px; align-items: center; }
+@media (max-width: 760px) { .ai { grid-template-columns: 1fr; } }
+.ai blockquote { margin: 0; font-family: var(--display); font-weight: 600; text-transform: uppercase; font-size: clamp(28px, 4vw, 44px); line-height: 1.05; border-left: 6px solid var(--accent-soft); padding-left: 18px; }
+.btn { display: inline-flex; align-items: center; gap: 10px; background: var(--accent); color: var(--on-accent); padding: 14px 22px; min-height: 44px; border-radius: var(--r); text-decoration: none; font-family: var(--display); font-weight: 500; text-transform: uppercase; letter-spacing: .06em; justify-self: start; }
+.btn:hover { background: var(--accent-ink); }
+.btn.ghost { background: transparent; color: var(--ink); border: 1px solid var(--line); }
+.btn.ghost:hover { border-color: var(--ink); background: transparent; }
+
+/* Подвал */
+.facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px 40px; }
+.facts ul { margin: 0; padding: 0; list-style: none; display: grid; gap: 8px; font-size: 15px; }
+.contact { background: var(--hero-bg); color: var(--hero-fg); border: 0; }
+.contact .label { color: var(--hero-2); }
+.contact h2 { color: var(--hero-fg); }
+.contacts { display: flex; flex-wrap: wrap; gap: 12px 28px; font-family: var(--mono); font-size: 14px; align-items: center; }
+.contacts a { color: var(--hero-accent); }
+.copy { font: 12px var(--mono); background: none; border: 1px solid rgba(245,245,242,.3); color: var(--hero-fg); padding: 6px 10px; cursor: pointer; }
+.actions { display: flex; flex-wrap: wrap; gap: 12px; }
+.contact .btn { background: var(--hero-accent); color: #0a1829; }
+.contact .btn:hover { background: #ffffff; }
+.contact .btn.ghost { background: transparent; color: var(--hero-fg); border-color: rgba(255,255,255,.3); }
+.foot { font-size: 13px; color: var(--hero-2); }
+
+/* Лайтбокс */
+.lb { position: fixed; inset: 0; z-index: 50; background: rgba(13,12,18,.92); display: grid; place-items: center; padding: max(16px, env(safe-area-inset-top, 0px)) max(16px, env(safe-area-inset-right, 0px)) max(16px, env(safe-area-inset-bottom, 0px)) max(16px, env(safe-area-inset-left, 0px)); cursor: zoom-out; }
+.lb img { max-width: 100%; max-height: 88vh; width: auto; }
+.lb p { color: #e4e3ea; font-size: 14px; margin-top: 10px; max-width: 70ch; text-align: center; }
+.lb figure { justify-items: center; }
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="wrap">
+    <p class="label">Жанна Носова · Senior / Lead Designer · бренд, e-commerce, упаковка, 3D</p>
+    <h1>Бренд, который <em>не живёт</em> отдельно от продукта</h1>
+    <p class="lead">Переношу визуальный язык бренда в интернет-магазин, упаковку и 3D и закрепляю его правилами, по которым дальше работает вся команда. Упаковка на этой странице — выпущенные продукты.</p>
+    <ul class="reqs" aria-label="Направления работы">
+      <li><a href="#ecom"><span class="go">01 · e-com</span><span class="q">Бренд в e-commerce: сайт, мобильная версия, промо</span></a></li>
+      <li><a href="#line"><span class="go">02 · система</span><span class="q">Визуальные системы: цвет, типографика, графика</span></a></li>
+      <li><a href="#d3"><span class="go">03 · 3D</span><span class="q">3D, дошедшее до производства</span></a></li>
+      <li><a href="#rules"><span class="go">04 · правила</span><span class="q">Бренд-буки и правила масштабирования</span></a></li>
+      <li><a href="#ai"><span class="go">05 · AI</span><span class="q">AI в работе с визуалом</span></a></li>
+    </ul>
+    <dl class="passport">
+      <div><dt>Роль</dt><dd>Senior / Lead Product Designer</dd></div>
+      <div><dt>База</dt><dd>Графический дизайн: типографика, фирменный стиль, упаковка</dd></div>
+      <div><dt>Каналы</dt><dd>E-commerce, рассылки, баннеры, полка, наружка</dd></div>
+      <div><dt>Инструменты</dt><dd>Figma · Cinema 4D · Gemini · GPT</dd></div>
+    </dl>
+  </div>
+</header>
+
+<main>
+  <section id="ecom">
+    <div class="wrap">
+      <div class="head">
+        <p class="kicker">01 · Бренд внутри e-commerce</p>
+        <h2>Clarins: один язык на сайте, в рассылке и на коробке</h2>
+        <p class="quote"><b>Премиальный бренд в e-commerce должен продавать и оставаться собой в каждом формате.</b></p>
+      </div>
+
+      <div class="sub">
+        <h3>Интернет-магазин премиального бренда</h3>
+        <p>Главная, мобильная версия, мегаменю, рассылки и промо. Каждый формат решает коммерческую задачу и читается как Clarins без логотипа.</p>
+        <figure>
+          <button class="zoom plate" type="button" data-cap="Главная интернет-магазина · A-spot · ключевой визуал задаёт тон всей кампании"><img src="img/cl-main.jpg" alt="Главная страница интернет-магазина Clarins, верхний баннер" loading="lazy"></button>
+          <figcaption><b>Главная · A-spot.</b> Ключевой визуал задаёт тон кампании, дальше он раскладывается на все форматы.</figcaption>
+        </figure>
+        <div class="g3">
+          <figure>
+            <button class="zoom plate ratio-43" type="button" data-cap="Мобильная версия · сезонная кампания"><img src="img/cl-mobile.jpg" alt="Мобильный баннер Clarins" loading="lazy"></button>
+            <figcaption><b>Мобильная версия.</b> Та же кампания, перекомпонованная под узкий экран.</figcaption>
+          </figure>
+          <figure>
+            <button class="zoom plate ratio-43" type="button" data-cap="Рассылка French Beauty · анимированный GIF"><img src="img/cl-mail-french.gif" alt="Анимированная рассылка Clarins French Beauty" loading="lazy"></button>
+            <figcaption><b>Рассылка.</b> Анимация в границах бренда: мягкий ритм, без «распродажной» агрессии.</figcaption>
+          </figure>
+          <figure>
+            <button class="zoom plate ratio-43" type="button" data-cap="Промо-баннер · подарок к покупке"><img src="img/cl-cherry.jpg" alt="Промо-баннер Clarins с косметичкой" loading="lazy"></button>
+            <figcaption><b>Промо «подарок к покупке».</b> Механика e-com, поданная языком марки.</figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <div class="sub">
+        <h3>Новогодняя кампания: упаковка и digital как одно целое</h3>
+        <p>Коробки и цифровые носители одной кампании делала сама. Пряничные звёзды, ягоды и снежинки работают одинаково на картоне, в мегаменю и в письме. Бренд не существует отдельно от продукта.</p>
+        <div class="g21">
+          <figure>
+            <button class="zoom plate ratio-43" type="button" data-cap="Новогодние коробки · 3D-визуализация · Cinema 4D"><img src="img/ny-boxes.jpg" alt="3D-визуализация новогодних подарочных коробок Clarins" loading="lazy"></button>
+            <figcaption><b>Подарочные коробки · 3D.</b> Отсюда графика переходит во все цифровые точки контакта.</figcaption>
+          </figure>
+          <div class="sub" style="gap:16px">
+            <figure>
+              <button class="zoom plate" type="button" data-cap="Мегаменю сайта · новогодний блок"><img src="img/ny-menu.gif" alt="Новогодний блок в мегаменю сайта Clarins" loading="lazy"></button>
+              <figcaption><b>Мегаменю.</b> Те же элементы в навигации сайта.</figcaption>
+            </figure>
+            <figure>
+              <button class="zoom plate" type="button" data-cap="Рассылка · поздравление с Новым годом · анимация"><img src="img/ny-mail.gif" alt="Новогодняя анимированная рассылка Clarins" loading="lazy"></button>
+              <figcaption><b>Рассылка.</b> Анимированное поздравление в том же наборе графики.</figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="line">
+    <div class="wrap">
+      <div class="head">
+        <p class="kicker">02 · Визуальная система линейки</p>
+        <h2>Упаковка, которую различаешь до того, как прочитал</h2>
+        <p class="quote"><b>Общая сетка держит бренд, цвет различает продукт.</b></p>
+      </div>
+      <p class="text">Линейки для Compliment и Estelare разрабатывала с нуля, продукты выпущены. Принцип один: общая сетка и типографика держат бренд, а цвет кодирует продукт. На полке и в карточке маркетплейса покупатель находит своё по цвету и символу.</p>
+      <ul class="points">
+        <li><b><span class="swatch" style="background:#7cbf2c"></span>Zn · цинк</b><span>Зелёный.</span></li>
+        <li><b><span class="swatch" style="background:#6a4bc4"></span>Se · селен</b><span>Фиолетовый.</span></li>
+        <li><b><span class="swatch" style="background:#f0952a"></span>Kt · кератин</b><span>Оранжевый.</span></li>
+        <li><b>Общее</b><span>Сетка, шрифт, белая база, место логотипа и описания.</span></li>
+      </ul>
+      <div class="sub">
+        <h3>Compliment: выпущенные продукты</h3>
+        <div class="g4">
+          <figure><button class="zoom plate ratio-32" type="button" data-cap="Compliment · Zn / Se / Kt · коробки · фото выпущенного продукта"><img src="img/photo-IMG_5805.jpg" alt="Compliment: Zn / Se / Kt · коробки" loading="lazy"></button><figcaption>Zn / Se / Kt · коробки</figcaption></figure>
+          <figure><button class="zoom plate ratio-32" type="button" data-cap="Compliment · Символ компонента крупно · фото выпущенного продукта"><img src="img/photo-IMG_9699.jpg" alt="Compliment: Символ компонента крупно" loading="lazy"></button><figcaption>Символ компонента крупно</figcaption></figure>
+          <figure><button class="zoom plate ratio-32" type="button" data-cap="Compliment · Флаконы и коробки серии · фото выпущенного продукта"><img src="img/photo-IMG_5718.jpg" alt="Compliment: Флаконы и коробки серии" loading="lazy"></button><figcaption>Флаконы и коробки серии</figcaption></figure>
+          <figure><button class="zoom plate ratio-32" type="button" data-cap="Compliment · Kt · вся серия · фото выпущенного продукта"><img src="img/photo-IMG_5863.jpg" alt="Compliment: Kt · вся серия" loading="lazy"></button><figcaption>Kt · вся серия</figcaption></figure>
+          <figure><button class="zoom plate ratio-32" type="button" data-cap="Compliment · Ампулы Se / Zn / Kt · фото выпущенного продукта"><img src="img/photo-IMG_5753.jpg" alt="Compliment: Ампулы Se / Zn / Kt" loading="lazy"></button><figcaption>Ампулы Se / Zn / Kt</figcaption></figure>
+          <figure><button class="zoom plate ratio-32" type="button" data-cap="Compliment · Velvet · восковые полоски · фото выпущенного продукта"><img src="img/photo-IMG_6127.jpg" alt="Compliment: Velvet · восковые полоски" loading="lazy"></button><figcaption>Velvet · восковые полоски</figcaption></figure>
+          <figure><button class="zoom plate ratio-32" type="button" data-cap="Compliment · Intimate · фото выпущенного продукта"><img src="img/photo-IMG_9667.jpg" alt="Compliment Intimate: три коробки с цветком-лотосом" loading="lazy"></button><figcaption>Intimate</figcaption></figure>
+          <figure><button class="zoom plate ratio-32" type="button" data-cap="Compliment · Argan Oil · фото выпущенного продукта"><img src="img/photo-IMG_9692.jpg" alt="Compliment: Argan Oil" loading="lazy"></button><figcaption>Argan Oil</figcaption></figure>
+        </div>
+        <p class="label">Реальные фото продукции · нажмите, чтобы увеличить</p>
+      </div>
+
+      <div class="sub">
+        <h3>Estelare: шесть масок, одна форма</h3>
+        <div class="g3">
+          <figure><button class="zoom plate ratio-43" type="button" data-cap="Estelare · линейка масок · 3D-визуализация"><img src="img/pack-001.jpg" alt="3D-визуализация линейки масок Estelare" loading="lazy"></button><figcaption><b>Линейка · 3D.</b> Форма саше-капли, лицо с зоной нанесения, пастельный цвет по типу ухода.</figcaption></figure>
+          <figure><button class="zoom plate ratio-43" type="button" data-cap="Estelare · выпущенный продукт в руках · съёмка на море"><img src="img/pack-006.jpg" alt="Маски Estelare в руке на фоне моря" loading="lazy"></button><figcaption><b>Выпущенный продукт.</b> Реальные маски, взяли с собой на море.</figcaption></figure>
+          <figure><button class="zoom plate ratio-43" type="button" data-cap="Estelare · выпущенный продукт · съёмка на камнях"><img src="img/pack-005.jpg" alt="Маски Estelare на камнях" loading="lazy"></button><figcaption><b>Та же съёмка.</b> Цвет SKU узнаётся и вне полки.</figcaption></figure>
+        </div>
+        <div class="g4">
+          <figure><button class="zoom plate ratio-43" type="button" data-cap="Black Bubble Mask · лицевая и обратная сторона"><img src="img/pack-008.jpg" alt="Маска Black Bubble, две стороны" loading="lazy"></button><figcaption>Black Bubble</figcaption></figure>
+          <figure><button class="zoom plate ratio-43" type="button" data-cap="Dead Sea Mud Mask · лицевая и обратная сторона"><img src="img/pack-009.jpg" alt="Маска Dead Sea Mud, две стороны" loading="lazy"></button><figcaption>Dead Sea Mud</figcaption></figure>
+          <figure><button class="zoom plate ratio-43" type="button" data-cap="Platinum Peel-off Mask · лицевая и обратная сторона"><img src="img/pack-010.jpg" alt="Маска Platinum Peel-off, две стороны" loading="lazy"></button><figcaption>Platinum Peel-off</figcaption></figure>
+          <figure><button class="zoom plate ratio-43" type="button" data-cap="Soft Peeling Gel · лицевая и обратная сторона"><img src="img/pack-011.jpg" alt="Пилинг-гель Soft Peeling, две стороны" loading="lazy"></button><figcaption>Soft Peeling Gel</figcaption></figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="d3">
+    <div class="wrap">
+      <div class="head">
+        <p class="kicker">03 · 3D, дошедшее до производства</p>
+        <h2>Рендер, который совпадает с полкой</h2>
+        <p class="quote"><b>3D — рабочий инструмент: по рендеру принимают решение, полка его подтверждает.</b></p>
+      </div>
+      <p class="text">Слева 3D-визуализация из Cinema 4D, справа фото того же продукта после выпуска. Те же коробки в том же наборе: цвет, пропорции и типографика на полке совпадают с рендером.</p>
+      <div class="compare">
+        <div class="tabs" role="tablist" aria-label="Продукт">
+          <button type="button" role="tab" aria-selected="true" data-i="0">Ампулы Zn / Se / Kt</button>
+          <button type="button" role="tab" aria-selected="false" data-i="1">Argan Oil</button>
+          <button type="button" role="tab" aria-selected="false" data-i="2">Panthenol</button>
+          <button type="button" role="tab" aria-selected="false" data-i="3">Velvet</button>
+          <button type="button" role="tab" aria-selected="false" data-i="4">Intimate</button>
+        </div>
+        <div class="pair">
+          <figure>
+            <button class="zoom plate ratio-43" type="button" id="zr" data-cap="3D · Cinema 4D"><img id="imgRender" src="img/pack-038.jpg" alt="3D-рендер коробок ампул Zn / Se / Kt"></button>
+            <figcaption><b>3D · Cinema 4D.</b> Визуализация до производства.</figcaption>
+          </figure>
+          <span class="arrow" aria-hidden="true">→</span>
+          <figure>
+            <button class="zoom plate ratio-43" type="button" id="zp" data-cap="Фото выпущенного продукта"><img id="imgPhoto" src="img/photo-IMG_9700.jpg" alt="Фото выпущенных коробок ампул Zn / Se / Kt"></button>
+            <figcaption><b>Фото продукта.</b> Тот же продукт после выпуска.</figcaption>
+          </figure>
+        </div>
+      </div>
+      <div class="role">
+        <p class="label">Моя роль</p>
+        <p>Вела упаковку от 3D-концепта до финальных файлов: дорабатывала макеты по обратной связи менеджера проекта. Продукты выпущены.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="rules">
+    <div class="wrap">
+      <div class="head">
+        <p class="kicker">04 · Правила и масштаб</p>
+        <h2>Сначала правило, потом сто носителей</h2>
+        <p class="quote"><b>Хорошая система работает без автора: правило описано один раз, носителей сотни.</b></p>
+      </div>
+
+      <div class="sub">
+        <h3>FEELEE: юбилей музыкального лейбла, 1988–2018</h3>
+        <p>Система построена на трёх знаках из языка звукозаписи: REC, PLAY, F.FWD. Внутри знака — изображение «территории», из знаков собираются паттерны. Дальше правило само порождает постеры, наружку, мерч и упаковку релизов.</p>
+        <div class="g3">
+          <figure><button class="zoom plate ratio-43" type="button" data-cap="FEELEE · знак PLAY с изображением внутри"><img src="img/fl-poster.jpg" alt="Знак PLAY с фотографией моря внутри, чёрный фон" loading="lazy"></button><figcaption><b>Знак.</b> Внутри «территория»: море, люди, студия.</figcaption></figure>
+          <figure><button class="zoom plate ratio-43" type="button" data-cap="FEELEE · наружная реклама"><img src="img/fl-ooh.jpg" alt="Постеры FEELEE на остановке и сити-формате" loading="lazy"></button><figcaption><b>Наружка.</b> Паттерн из знаков держит узнаваемость в любом цвете.</figcaption></figure>
+          <figure><button class="zoom plate ratio-43" type="button" data-cap="FEELEE · мерч на основе паттернов"><img src="img/fl-merch.jpg" alt="Худи, чехлы и кеды с паттернами FEELEE" loading="lazy"></button><figcaption><b>Мерч.</b> Тот же паттерн на текстиле и аксессуарах.</figcaption></figure>
+        </div>
+      </div>
+
+      <div class="g2">
+        <div class="sub">
+          <h3>M10: фирменный стиль и бренд-бук сети АЗС</h3>
+          <figure><button class="zoom plate ratio-32" type="button" data-cap="M10 · страницы бренд-бука"><img src="img/m10-guide.jpg" alt="Развороты бренд-бука M10" loading="lazy"></button><figcaption><b>Бренд-бук.</b> Логотип, цвет, пиктограммы, носители. Правила, по которым стиль внедряют без автора.</figcaption></figure>
+        </div>
+        <div class="sub">
+          <h3>Proma: редизайн знака и система</h3>
+          <figure><button class="zoom plate ratio-32" type="button" data-cap="Proma · страница руководства по стилю: знак и логотипы"><img src="img/pr-logo.jpg" alt="Страница руководства Proma с логотипами Proma и Pris" loading="lazy"></button><figcaption><b>Руководство.</b> Пропорции знака стали основой сеток и декоративных элементов. К фирменному зелёному добавлен красный акцент.</figcaption></figure>
+        </div>
+      </div>
+
+      <details>
+        <summary><span>Clarins: один визуал → 15 рекламных форматов</span><span class="label"><span class="more">Показать</span><span class="less">Скрыть</span></span></summary>
+        <div class="formats">
+          <p class="text" style="margin-bottom:16px">Все форматы промо «подарок к покупке» в масштабе 1 : 2. Каждый перекомпонован под свой формат: от небоскрёба 300 × 1050 до мобильной полоски 320 × 50.</p>
+          <div class="formats-in" id="formats"></div>
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <section id="ai">
+    <div class="wrap">
+      <div class="head">
+        <p class="kicker">05 · AI как инструмент</p>
+        <h2>Hauswell: AI-визуал для товаров для дома</h2>
+        <p class="quote"><b>AI ускоряет поиск направлений. Что годится в работу, решает дизайнер.</b></p>
+      </div>
+      <div class="ai">
+        <figure>
+          <button class="zoom plate" type="button" data-cap="Hauswell · независимый концепт · AI-визуал (Gemini) · баннер для e-commerce"><img src="img/ai-banner.jpg" alt="AI-баннер концепта Hauswell" loading="lazy"></button>
+          <figcaption><b>Независимый концепт.</b> Не официальный проект Hauswell. Визуалы сделаны в Gemini по товарным референсам.</figcaption>
+        </figure>
+        <div class="sub">
+          <blockquote>Человек задаёт критерий. AI предлагает варианты.</blockquote>
+          <p>В кейсе показано, что я отклоняю: генерации с ошибками в конструкции товара. Атмосферу сохраняю, ошибки исключаю, серию сокращаю. Точность продукта здесь — критерий приёмки.</p>
+          <a class="btn ghost" href="https://zh8n.github.io/hauswell-ai-commerce/" target="_blank" rel="noopener">Открыть кейс Hauswell ↗</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="facts">
+        <div class="sub">
+          <p class="label">Награды и признание</p>
+          <ul>
+            <li>D&amp;AD Student Awards, Лондон — победитель и номинант</li>
+            <li>POPAI Students Design Awards 2011 — шорт-лист</li>
+            <li>Cosmopolitan Beauty Awards 2017 — финалист выставки</li>
+            <li>«Гедеон Рихтер» — благодарности за материалы к визиту руководства (2020) и «Неделю женского здоровья» (2019)</li>
+          </ul>
+        </div>
+        <div class="sub">
+          <p class="label">Образование</p>
+          <ul>
+            <li>МГУ, факультет журналистики — дизайн СМИ: типографика, инфографика, шрифт</li>
+            <li>Британская высшая школа дизайна</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact">
+    <div class="wrap">
+      <div class="head">
+        <p class="label">Контакт</p>
+        <h2>Связаться</h2>
+      </div>
+      <div class="contacts">
+        <span id="mail">zh.nosova@gmail.com</span>
+        <button class="copy" type="button" id="copyMail">Скопировать</button>
+        <a href="https://t.me/zhanna8n" target="_blank" rel="noopener">Telegram @zhanna8n</a>
+      </div>
+      <div class="actions">
+        <a class="btn" href="https://zh8n.github.io/portfolio/?utm_source=hh&amp;utm_campaign=vseinstrumenty" target="_blank" rel="noopener">Продуктовое портфолио ↗</a>
+        <a class="btn ghost" href="https://hh.ru/resume/bdc3959fff0ea1ea430039ed1f524f33356e49" target="_blank" rel="noopener">Резюме на hh ↗</a>
+      </div>
+      <p class="foot">Работы показаны как примеры из портфолио автора; товарные знаки принадлежат их владельцам.</p>
+    </div>
+  </section>
+</main>
+
+<div class="lb" id="lb" hidden><figure><img id="lbImg" alt=""><p id="lbCap"></p></figure></div>
+
+<script>
+(function () {
+  var pairs = [
+    ["pack-038.jpg", "photo-IMG_9700.jpg", "ампулы Zn / Se / Kt"],
+    ["pack-025.jpg", "photo-IMG_9692.jpg", "Argan Oil"],
+    ["pack-029.jpg", "photo-IMG_9681.jpg", "Panthenol"],
+    ["pack-036.jpg", "photo-IMG_9676.jpg", "Velvet"],
+    ["pack-026.jpg", "photo-IMG_9666.jpg", "Intimate"]
+  ];
+  var r = document.getElementById("imgRender"), p = document.getElementById("imgPhoto");
+  document.querySelectorAll(".tabs button").forEach(function (b) {
+    b.addEventListener("click", function () {
+      document.querySelectorAll(".tabs button").forEach(function (x) { x.setAttribute("aria-selected", "false"); });
+      b.setAttribute("aria-selected", "true");
+      var d = pairs[+b.dataset.i];
+      r.src = "img/" + d[0]; r.alt = "3D-рендер: " + d[2];
+      p.src = "img/" + d[1]; p.alt = "Фото выпущенного продукта: " + d[2];
+    });
+  });
+
+  var formats = ["300x1050","300x600","160x600","120x600","240x400","240x400_2","300x250","250x250","200x200","970x250","970x90","728x90","468x60","320x100","320x50"];
+  var box = document.getElementById("formats");
+  formats.forEach(function (f) {
+    var w = parseInt(f, 10);
+    var fig = document.createElement("figure");
+    fig.innerHTML = '<img src="img/gwp-' + f + '_Bags_gwp.jpg" alt="Баннер ' + f.replace("_2", "") + '" loading="lazy" style="--w:' + w + '"><figcaption>' + f.replace("_2", " · вариант").replace("x", " × ") + '</figcaption>';
+    box.appendChild(fig);
+  });
+
+  var lb = document.getElementById("lb"), lbImg = document.getElementById("lbImg"), lbCap = document.getElementById("lbCap");
+  document.querySelectorAll(".zoom").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      var img = btn.querySelector("img");
+      lbImg.src = img.src; lbImg.alt = img.alt; lbCap.textContent = btn.dataset.cap || img.alt;
+      lb.hidden = false;
+    });
+  });
+  lb.addEventListener("click", function () { lb.hidden = true; });
+  document.addEventListener("keydown", function (e) { if (e.key === "Escape") lb.hidden = true; });
+
+  var mail = document.getElementById("mail"), cb = document.getElementById("copyMail");
+  cb.addEventListener("click", function () {
+    function sel() { var rg = document.createRange(); rg.selectNodeContents(mail); var s = getSelection(); s.removeAllRanges(); s.addRange(rg); }
+    try {
+      navigator.clipboard.writeText(mail.textContent).then(function () { cb.textContent = "Скопировано"; }, function () { sel(); cb.textContent = "Выделено"; });
+    } catch (e) { sel(); cb.textContent = "Выделено"; }
+  });
+})();
+</script>
+
+</body>
+</html>
